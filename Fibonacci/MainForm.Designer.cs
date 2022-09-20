@@ -31,12 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this._resultLabel = new System.Windows.Forms.Label();
             this._clearButton = new System.Windows.Forms.Button();
             this._inputTextbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this._calculateButton = new System.Windows.Forms.Button();
-            this._resultLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,20 @@
             this.panel2.Size = new System.Drawing.Size(432, 217);
             this.panel2.TabIndex = 2;
             // 
+            // _resultLabel
+            // 
+            this._resultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this._resultLabel.AutoSize = true;
+            this._resultLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._resultLabel.Location = new System.Drawing.Point(158, 88);
+            this._resultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this._resultLabel.Name = "_resultLabel";
+            this._resultLabel.Size = new System.Drawing.Size(24, 25);
+            this._resultLabel.TabIndex = 6;
+            this._resultLabel.Text = "...";
+            // 
             // _clearButton
             // 
             this._clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -107,7 +121,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._inputTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this._inputTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._inputTextbox.ForeColor = System.Drawing.Color.Gray;
+            this._inputTextbox.ForeColor = System.Drawing.Color.Black;
             this._inputTextbox.Location = new System.Drawing.Point(154, 46);
             this._inputTextbox.Margin = new System.Windows.Forms.Padding(2);
             this._inputTextbox.Name = "_inputTextbox";
@@ -157,20 +171,6 @@
             this._calculateButton.TabIndex = 1;
             this._calculateButton.Text = "Рассчитать";
             this._calculateButton.UseVisualStyleBackColor = false;
-            // 
-            // _resultLabel
-            // 
-            this._resultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._resultLabel.AutoSize = true;
-            this._resultLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this._resultLabel.Location = new System.Drawing.Point(158, 88);
-            this._resultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this._resultLabel.Name = "_resultLabel";
-            this._resultLabel.Size = new System.Drawing.Size(24, 25);
-            this._resultLabel.TabIndex = 6;
-            this._resultLabel.Text = "...";
             // 
             // MainForm
             // 

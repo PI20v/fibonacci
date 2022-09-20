@@ -31,13 +31,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this._registerButton = new System.Windows.Forms.Button();
             this._deleteAccountButton = new System.Windows.Forms.Button();
             this._loginTextBox = new System.Windows.Forms.TextBox();
             this._authorizeButton = new System.Windows.Forms.Button();
             this._passwordTextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +73,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this._registerButton);
             this.panel2.Controls.Add(this._deleteAccountButton);
             this.panel2.Controls.Add(this._loginTextBox);
             this.panel2.Controls.Add(this._authorizeButton);
@@ -85,6 +85,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(445, 258);
             this.panel2.TabIndex = 25;
+            // 
+            // _registerButton
+            // 
+            this._registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this._registerButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this._registerButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this._registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._registerButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._registerButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this._registerButton.Location = new System.Drawing.Point(16, 203);
+            this._registerButton.Margin = new System.Windows.Forms.Padding(2);
+            this._registerButton.Name = "_registerButton";
+            this._registerButton.Size = new System.Drawing.Size(169, 38);
+            this._registerButton.TabIndex = 23;
+            this._registerButton.Text = "Регистрация";
+            this._registerButton.UseVisualStyleBackColor = false;
+            this._registerButton.Click += new System.EventHandler(this._registerButton_Click);
             // 
             // _deleteAccountButton
             // 
@@ -101,6 +118,7 @@
             this._deleteAccountButton.TabIndex = 17;
             this._deleteAccountButton.Text = "Удалить аккаунт";
             this._deleteAccountButton.UseVisualStyleBackColor = false;
+            this._deleteAccountButton.Click += new System.EventHandler(this._deleteAccountButton_Click);
             // 
             // _loginTextBox
             // 
@@ -109,12 +127,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this._loginTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._loginTextBox.ForeColor = System.Drawing.Color.Gray;
+            this._loginTextBox.ForeColor = System.Drawing.Color.Black;
             this._loginTextBox.Location = new System.Drawing.Point(166, 38);
             this._loginTextBox.Margin = new System.Windows.Forms.Padding(2);
             this._loginTextBox.Name = "_loginTextBox";
             this._loginTextBox.Size = new System.Drawing.Size(193, 29);
             this._loginTextBox.TabIndex = 22;
+            this._loginTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this._loginTextBox_KeyPress);
             // 
             // _authorizeButton
             // 
@@ -131,6 +150,7 @@
             this._authorizeButton.TabIndex = 18;
             this._authorizeButton.Text = "Вход";
             this._authorizeButton.UseVisualStyleBackColor = false;
+            this._authorizeButton.Click += new System.EventHandler(this._authorizeButton_Click);
             // 
             // _passwordTextBox
             // 
@@ -139,12 +159,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._passwordTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this._passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._passwordTextBox.Enabled = false;
             this._passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._passwordTextBox.ForeColor = System.Drawing.Color.Black;
             this._passwordTextBox.Location = new System.Drawing.Point(167, 78);
             this._passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this._passwordTextBox.Name = "_passwordTextBox";
-            this._passwordTextBox.ReadOnly = true;
             this._passwordTextBox.Size = new System.Drawing.Size(193, 29);
             this._passwordTextBox.TabIndex = 21;
             // 
@@ -176,22 +195,6 @@
             this.label4.TabIndex = 19;
             this.label4.Text = "Логин:";
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(16, 203);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 38);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Регистрация";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +207,7 @@
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Authorization";
+            this.Shown += new System.EventHandler(this.AuthorizationForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -217,7 +221,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button _registerButton;
         private System.Windows.Forms.Button _deleteAccountButton;
         private System.Windows.Forms.TextBox _loginTextBox;
         private System.Windows.Forms.Button _authorizeButton;
