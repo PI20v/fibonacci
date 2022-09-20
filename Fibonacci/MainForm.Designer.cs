@@ -113,7 +113,6 @@
             this._inputTextbox.Name = "_inputTextbox";
             this._inputTextbox.Size = new System.Drawing.Size(180, 29);
             this._inputTextbox.TabIndex = 4;
-            this._inputTextbox.Text = " Ввод...";
             // 
             // label3
             // 
