@@ -60,7 +60,8 @@ namespace Fibonacci
 
         private void _helpButton_Click(object sender, EventArgs e)
         {
-            if (File.Exists("Справка.ref")) Process.Start("Справка.ref");
+            string fileName = "Справка.html";
+            if (File.Exists(fileName)) Process.Start(fileName);
             else MessageBox.Show("Файл со справкой отсутствует", "Ошибка");
         }
 
