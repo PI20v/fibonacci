@@ -31,14 +31,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this._resultLabel = new System.Windows.Forms.Label();
-            this._clearButton = new System.Windows.Forms.Button();
-            this._inputTextbox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this._helpButton = new System.Windows.Forms.Button();
+            this._number = new System.Windows.Forms.NumericUpDown();
+            this._dataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this._calculateButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._number)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,7 +52,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 95);
+            this.panel1.Size = new System.Drawing.Size(591, 95);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -72,75 +73,66 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this._resultLabel);
-            this.panel2.Controls.Add(this._clearButton);
-            this.panel2.Controls.Add(this._inputTextbox);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this._helpButton);
+            this.panel2.Controls.Add(this._number);
+            this.panel2.Controls.Add(this._dataGridView);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this._calculateButton);
             this.panel2.Location = new System.Drawing.Point(39, 119);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(432, 217);
+            this.panel2.Size = new System.Drawing.Size(514, 314);
             this.panel2.TabIndex = 2;
             // 
-            // _resultLabel
+            // _helpButton
             // 
-            this._resultLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._resultLabel.AutoSize = true;
-            this._resultLabel.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this._resultLabel.Location = new System.Drawing.Point(158, 88);
-            this._resultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this._resultLabel.Name = "_resultLabel";
-            this._resultLabel.Size = new System.Drawing.Size(24, 25);
-            this._resultLabel.TabIndex = 6;
-            this._resultLabel.Text = "...";
+            this._helpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this._helpButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this._helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._helpButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._helpButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this._helpButton.Location = new System.Drawing.Point(22, 258);
+            this._helpButton.Margin = new System.Windows.Forms.Padding(2);
+            this._helpButton.Name = "_helpButton";
+            this._helpButton.Size = new System.Drawing.Size(129, 38);
+            this._helpButton.TabIndex = 21;
+            this._helpButton.Text = "Справка";
+            this._helpButton.UseVisualStyleBackColor = false;
+            this._helpButton.Click += new System.EventHandler(this._helpButton_Click);
             // 
-            // _clearButton
+            // _number
             // 
-            this._clearButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this._clearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
-            this._clearButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this._clearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._clearButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this._clearButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this._clearButton.Location = new System.Drawing.Point(26, 161);
-            this._clearButton.Margin = new System.Windows.Forms.Padding(2);
-            this._clearButton.Name = "_clearButton";
-            this._clearButton.Size = new System.Drawing.Size(126, 38);
-            this._clearButton.TabIndex = 5;
-            this._clearButton.Text = "Очистить";
-            this._clearButton.UseVisualStyleBackColor = false;
+            this._number.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this._number.Location = new System.Drawing.Point(272, 18);
+            this._number.Maximum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            this._number.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this._number.Name = "_number";
+            this._number.Size = new System.Drawing.Size(120, 32);
+            this._number.TabIndex = 20;
+            this._number.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
-            // _inputTextbox
+            // _dataGridView
             // 
-            this._inputTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this._inputTextbox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._inputTextbox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._inputTextbox.ForeColor = System.Drawing.Color.Black;
-            this._inputTextbox.Location = new System.Drawing.Point(154, 46);
-            this._inputTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this._inputTextbox.Name = "_inputTextbox";
-            this._inputTextbox.Size = new System.Drawing.Size(180, 29);
-            this._inputTextbox.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(92, 88);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "F(n) =";
+            this._dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this._dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this._dataGridView.Location = new System.Drawing.Point(22, 59);
+            this._dataGridView.Name = "_dataGridView";
+            this._dataGridView.ReadOnly = true;
+            this._dataGridView.Size = new System.Drawing.Size(470, 194);
+            this._dataGridView.TabIndex = 19;
             // 
             // label2
             // 
@@ -149,12 +141,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(111, 46);
+            this.label2.Location = new System.Drawing.Point(119, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 25);
+            this.label2.Size = new System.Drawing.Size(143, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "n =";
+            this.label2.Text = "Введите число:";
             // 
             // _calculateButton
             // 
@@ -164,13 +156,14 @@
             this._calculateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this._calculateButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this._calculateButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this._calculateButton.Location = new System.Drawing.Point(281, 161);
+            this._calculateButton.Location = new System.Drawing.Point(363, 258);
             this._calculateButton.Margin = new System.Windows.Forms.Padding(2);
             this._calculateButton.Name = "_calculateButton";
             this._calculateButton.Size = new System.Drawing.Size(129, 38);
             this._calculateButton.TabIndex = 1;
             this._calculateButton.Text = "Рассчитать";
             this._calculateButton.UseVisualStyleBackColor = false;
+            this._calculateButton.Click += new System.EventHandler(this._calculateButton_Click);
             // 
             // MainForm
             // 
@@ -179,17 +172,20 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(509, 357);
+            this.ClientSize = new System.Drawing.Size(591, 454);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fibonacci";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._number)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,12 +195,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button _calculateButton;
-        private System.Windows.Forms.TextBox _inputTextbox;
-        private System.Windows.Forms.Button _clearButton;
-        private System.Windows.Forms.Label _resultLabel;
+        private System.Windows.Forms.DataGridView _dataGridView;
+        private System.Windows.Forms.NumericUpDown _number;
+        private System.Windows.Forms.Button _helpButton;
     }
 }
 
