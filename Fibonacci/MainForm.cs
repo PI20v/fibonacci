@@ -12,7 +12,7 @@ namespace Fibonacci
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        public MainForm(AuthorizationForm authForm, string login)
         {
             InitializeComponent();
         }

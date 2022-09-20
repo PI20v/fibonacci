@@ -58,6 +58,7 @@
             this._returnButton.TabIndex = 17;
             this._returnButton.Text = "Назад";
             this._returnButton.UseVisualStyleBackColor = false;
+            this._returnButton.Click += new System.EventHandler(this._returnButton_Click);
             // 
             // _registerButton
             // 
@@ -74,6 +75,7 @@
             this._registerButton.TabIndex = 18;
             this._registerButton.Text = "Регистрация";
             this._registerButton.UseVisualStyleBackColor = false;
+            this._registerButton.Click += new System.EventHandler(this._registerButton_Click);
             // 
             // _loginTextBox
             // 
@@ -82,12 +84,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._loginTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this._loginTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this._loginTextBox.ForeColor = System.Drawing.Color.Gray;
+            this._loginTextBox.ForeColor = System.Drawing.Color.Black;
             this._loginTextBox.Location = new System.Drawing.Point(188, 30);
             this._loginTextBox.Margin = new System.Windows.Forms.Padding(2);
             this._loginTextBox.Name = "_loginTextBox";
             this._loginTextBox.Size = new System.Drawing.Size(193, 29);
             this._loginTextBox.TabIndex = 22;
+            this._loginTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this._loginTextBox_KeyPress);
             // 
             // _passwordTextBox
             // 
@@ -96,12 +99,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._passwordTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this._passwordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._passwordTextBox.Enabled = false;
             this._passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._passwordTextBox.ForeColor = System.Drawing.Color.Black;
             this._passwordTextBox.Location = new System.Drawing.Point(189, 70);
             this._passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this._passwordTextBox.Name = "_passwordTextBox";
-            this._passwordTextBox.ReadOnly = true;
             this._passwordTextBox.Size = new System.Drawing.Size(193, 29);
             this._passwordTextBox.TabIndex = 21;
             // 
@@ -161,12 +163,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this._repeatPasswordTextBox.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this._repeatPasswordTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this._repeatPasswordTextBox.Enabled = false;
             this._repeatPasswordTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this._repeatPasswordTextBox.ForeColor = System.Drawing.Color.Black;
             this._repeatPasswordTextBox.Location = new System.Drawing.Point(189, 111);
             this._repeatPasswordTextBox.Margin = new System.Windows.Forms.Padding(2);
             this._repeatPasswordTextBox.Name = "_repeatPasswordTextBox";
-            this._repeatPasswordTextBox.ReadOnly = true;
             this._repeatPasswordTextBox.Size = new System.Drawing.Size(193, 29);
             this._repeatPasswordTextBox.TabIndex = 24;
             // 
@@ -220,6 +221,7 @@
             this.Name = "RegistrationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registration";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.RegistrationForm_FormClosed);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
