@@ -60,9 +60,7 @@ namespace Fibonacci
 
         private void _helpButton_Click(object sender, EventArgs e)
         {
-            string fileName = "Справка.html";
-            if (File.Exists(fileName)) Process.Start(fileName);
-            else MessageBox.Show("Файл со справкой отсутствует", "Ошибка");
+            OpenFile("Справка.html", "Файл со справкой отсутствует");
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -98,6 +96,17 @@ namespace Fibonacci
                     writer.Write('\n');
                 }
             }
+        }
+
+        private void _showLogButton_Click(object sender, EventArgs e)
+        {
+            OpenFile(_user + ".txt", "Файл журнала отсутствует");
+        }
+
+        private static void OpenFile(string name, string errorMsg)
+        {
+            if (File.Exists(name)) Process.Start(name);
+            else MessageBox.Show(errorMsg, "Ошибка");
         }
     }
 }

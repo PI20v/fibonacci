@@ -31,11 +31,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this._helpButton = new System.Windows.Forms.Button();
+            this._showLogButton = new System.Windows.Forms.Button();
             this._number = new System.Windows.Forms.NumericUpDown();
             this._dataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this._calculateButton = new System.Windows.Forms.Button();
+            this._helpButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this._number)).BeginInit();
@@ -74,6 +75,7 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this._helpButton);
+            this.panel2.Controls.Add(this._showLogButton);
             this.panel2.Controls.Add(this._number);
             this.panel2.Controls.Add(this._dataGridView);
             this.panel2.Controls.Add(this.label2);
@@ -84,22 +86,22 @@
             this.panel2.Size = new System.Drawing.Size(514, 314);
             this.panel2.TabIndex = 2;
             // 
-            // _helpButton
+            // _showLogButton
             // 
-            this._helpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this._helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
-            this._helpButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
-            this._helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this._helpButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this._helpButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this._helpButton.Location = new System.Drawing.Point(22, 258);
-            this._helpButton.Margin = new System.Windows.Forms.Padding(2);
-            this._helpButton.Name = "_helpButton";
-            this._helpButton.Size = new System.Drawing.Size(129, 38);
-            this._helpButton.TabIndex = 21;
-            this._helpButton.Text = "Справка";
-            this._helpButton.UseVisualStyleBackColor = false;
-            this._helpButton.Click += new System.EventHandler(this._helpButton_Click);
+            this._showLogButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._showLogButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this._showLogButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this._showLogButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._showLogButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._showLogButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this._showLogButton.Location = new System.Drawing.Point(158, 258);
+            this._showLogButton.Margin = new System.Windows.Forms.Padding(2);
+            this._showLogButton.Name = "_showLogButton";
+            this._showLogButton.Size = new System.Drawing.Size(129, 38);
+            this._showLogButton.TabIndex = 21;
+            this._showLogButton.Text = "Журнал";
+            this._showLogButton.UseVisualStyleBackColor = false;
+            this._showLogButton.Click += new System.EventHandler(this._showLogButton_Click);
             // 
             // _number
             // 
@@ -165,6 +167,23 @@
             this._calculateButton.UseVisualStyleBackColor = false;
             this._calculateButton.Click += new System.EventHandler(this._calculateButton_Click);
             // 
+            // _helpButton
+            // 
+            this._helpButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this._helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(138)))), ((int)(((byte)(255)))));
+            this._helpButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(103)))), ((int)(((byte)(255)))));
+            this._helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this._helpButton.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this._helpButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this._helpButton.Location = new System.Drawing.Point(22, 258);
+            this._helpButton.Margin = new System.Windows.Forms.Padding(2);
+            this._helpButton.Name = "_helpButton";
+            this._helpButton.Size = new System.Drawing.Size(129, 38);
+            this._helpButton.TabIndex = 22;
+            this._helpButton.Text = "Справка";
+            this._helpButton.UseVisualStyleBackColor = false;
+            this._helpButton.Click += new System.EventHandler(this._helpButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,6 +218,7 @@
         private System.Windows.Forms.Button _calculateButton;
         private System.Windows.Forms.DataGridView _dataGridView;
         private System.Windows.Forms.NumericUpDown _number;
+        private System.Windows.Forms.Button _showLogButton;
         private System.Windows.Forms.Button _helpButton;
     }
 }
